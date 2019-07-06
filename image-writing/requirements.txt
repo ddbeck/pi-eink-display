@@ -1,3 +1,4 @@
- inky==0.0.5
- Pillow==6.1.0
+wheel==0.33.4
+inky==0.0.5
+Pillow==6.1.0
  
