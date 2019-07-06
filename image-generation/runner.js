@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const handler = require('serve-handler');
 const http = require('http');
 
