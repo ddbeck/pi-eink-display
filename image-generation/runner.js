@@ -17,9 +17,10 @@ async function grab() {
   console.log('Starting server');
   const server = await serve();
 
-  console.log('Starting puppeteer');
+  console.log('Starting puppeteer (${process.env.CHROMIUM_BIN})');
   const browser = await puppeteer.launch({
-    executablePath: process.env.CHROMIUM_BIN
+    executablePath: process.env.CHROMIUM_BIN,
+    args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-extensions'],
   });
 
   console.log('Fetching page');
