@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "puppeteer": "^1.18.1",
+    "puppeteer-core": "^1.18.1",
     "serve": "^11.0.2",
     "vue": "^2.6.10"
   },

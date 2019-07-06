@@ -18,7 +18,9 @@ async function grab() {
   const server = await serve();
 
   console.log('Starting puppeteer');
-  const browser = await puppeteer.launch({});
+  const browser = await puppeteer.launch({
+    executablePath: process.env.CHROMIUM_BIN
+  });
 
   console.log('Fetching page');
   const page = await browser.newPage();
