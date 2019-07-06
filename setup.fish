@@ -2,6 +2,7 @@
 
 cd image-generation
 npm ci
+mkdir -p output
 cd -
 
 cd image-writing
