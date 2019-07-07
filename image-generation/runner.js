@@ -27,8 +27,8 @@ async function grab() {
   const page = await browser.newPage();
   await page.goto('http://localhost:3000/');
 
-  await (await page.$('#eink-content')).screenshot({ path: 'element.png' })
-  await page.screenshot({ path: 'output/eink.png' });
+  const el = await page.$('#eink-content');
+  await el.screenshot({ path: 'output/eink.png' });
 
   console.log('Stopping puppeteer');
   await browser.close();
