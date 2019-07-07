@@ -20,7 +20,7 @@ async function grab() {
   console.log(`Starting puppeteer (${process.env.CHROMIUM_BIN})`);
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROMIUM_BIN,
-    args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-extensions'],
+    args: ['--headless', '--disable-gpu', '--disable-features=VizDisplayCompositor'],
   });
 
   console.log('Fetching page');
